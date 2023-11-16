@@ -6,7 +6,7 @@ const userRouter = require("./server/api/users/user.router");
 const questionRouter = require("./server/api/questions1/question.router");
 const answerRouter = require("./server/api/Answers1/answer.router");
 const app = express();
-const port = 4000;
+const port = process.env.PORT ;
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
