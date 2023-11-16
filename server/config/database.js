@@ -1,10 +1,10 @@
 const mysql = require("mysql2");
 
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "evangadiForum",
-  password: "123456",
-  database: "evangadiforum",
+  host: process.env.DB.HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+ database: process.env.MYSQL_DB,
   connectionLimit: 10,
 });
 // const pool = mysql.createPool({'mysql://fj3rc9xj8o0bswhxsz6c:pscale_pw_540phZLwJ7ZbRonzJFZj4cvJmGsYlNJUOjPG8iHqzPY@aws.connect.psdb.cloud/evangadi-forum?ssl={"rejectUnauthorized":true}'})
