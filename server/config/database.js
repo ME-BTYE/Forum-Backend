@@ -11,13 +11,13 @@ const pool = mysql.createConnection(process.env.DATABASE_URL)
 
 
 
-pool.getConnection(function (err, connection) {
-  // Do something with the connection
-  //   conn.query(/* ... */);
-  // Don't forget to release the connection when finished!
-  //   pool.releaseConnection(conn);
-  console.log("database connected");
-});
+// pool.getConnection(function (err, connection) {
+//   // Do something with the connection
+//   //   conn.query(/* ... */);
+//   // Don't forget to release the connection when finished!
+//   //   pool.releaseConnection(conn);
+//   console.log("database connected");
+// });
 
 let registration = `CREATE TABLE if not exists registration(
     user_id int auto_increment,
